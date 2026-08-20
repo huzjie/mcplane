@@ -1,0 +1,10 @@
+groups:
+  - name: mcplane
+    rules:
+      - alert: HighErrorRate
+        expr: rate(mcplane_errors_total[5m]) > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High error rate on mcplane gateway"

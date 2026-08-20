@@ -1,0 +1,24 @@
+{
+  "gateway": {
+    "host": "0.0.0.0",
+    "port": 8090,
+    "upstream_timeout_s": 60,
+    "max_round_trips": 8
+  },
+  "registry": {
+    "discovery_paths": ["examples/servers.json"]
+  },
+  "auth": {
+    "enabled": false,
+    "mode": "ema"
+  },
+  "rate_limit": {
+    "enabled": true,
+    "requests_per_second": 100,
+    "burst": 200
+  },
+  "cache": {
+    "enabled": true,
+    "default_ttl_ms": 60000
+  }
+}

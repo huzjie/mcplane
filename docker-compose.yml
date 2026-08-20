@@ -1,0 +1,22 @@
+services:
+  gateway:
+    build: .
+    ports:
+      - "8090:8090"
+    environment:
+      MCPLANE_GATEWAY__PORT: "8090"
+      MCPLANE_STORAGE__DB_PATH: "/data/mcplane.db"
+    volumes:
+      - mcplane-data:/data
+      - ./examples/servers.json:/app/servers.json:ro
+  mock:
+    image: python:3.12-slim
+    command: python -m mcplane.mock --port 8100
+    volumes:
+      - ./mcplane:/app/mcplane
+    working_dir: /app
+    ports:
+      - "8100:8100"
+
+volumes:
+  mcplane-data:

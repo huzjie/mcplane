@@ -1,0 +1,7 @@
+{
+  "echo": {
+    "url": "http://127.0.0.1:8100/mcp",
+    "description": "Mock echo + calculator MCP server",
+    "weight": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "title": "mcplane",
+  "uid": "mcplane",
+  "panels": [
+    {
+      "title": "Requests total",
+      "type": "timeseries",
+      "targets": [{"expr": "rate(mcplane_requests_total[5m])"}]
+    },
+    {
+      "title": "Errors total",
+      "type": "timeseries",
+      "targets": [{"expr": "rate(mcplane_errors_total[5m])"}]
+    },
+    {
+      "title": "P99 latency",
+      "type": "timeseries",
+      "targets": [{"expr": "mcplane_latency_seconds_summary{quantile=\"0.99\"}"}]
+    }
+  ]
+}

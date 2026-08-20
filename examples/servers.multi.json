@@ -1,0 +1,17 @@
+{
+  "echo": {
+    "url": "http://127.0.0.1:8100/mcp",
+    "description": "Mock echo + calculator MCP server",
+    "weight": 1
+  },
+  "git": {
+    "url": "http://127.0.0.1:8200/mcp",
+    "description": "Git integration MCP server",
+    "weight": 2
+  },
+  "filesystem": {
+    "url": "http://127.0.0.1:8300/mcp",
+    "description": "Filesystem MCP server",
+    "weight": 1
+  }
+}

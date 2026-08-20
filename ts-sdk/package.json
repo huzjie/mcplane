@@ -1,0 +1,16 @@
+{
+  "name": "@mcplane/sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for the mcplane stateless MCP control plane",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["mcp", "model-context-protocol", "gateway", "stateless"],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "typescript": "^5.5.0"
+  }
+}

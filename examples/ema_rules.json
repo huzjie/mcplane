@@ -1,0 +1,23 @@
+[
+  {
+    "name": "allow-list-tools",
+    "principal": "*",
+    "server": "*",
+    "method": "tools/list",
+    "effect": "allow"
+  },
+  {
+    "name": "allow-call-for-alice",
+    "principal": "alice",
+    "server": "*",
+    "method": "tools/call",
+    "effect": "allow"
+  },
+  {
+    "name": "deny-call-by-default",
+    "principal": "*",
+    "server": "*",
+    "method": "tools/call",
+    "effect": "deny"
+  }
+]

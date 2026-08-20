@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mcplane-config
+data:
+  servers.json: |
+    {
+      "echo": {
+        "url": "http://mock-server.default.svc.cluster.local/mcp",
+        "description": "Mock echo + calculator MCP server"
+      }
+    }
